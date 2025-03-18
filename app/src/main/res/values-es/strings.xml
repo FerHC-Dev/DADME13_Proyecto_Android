@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ASA</string>
+    <string name="action_settings">Configuración</string>
+    <string name="version">® Aeropuertos y Servicios Auxiliares V1.0</string>
+
+    <!-- Strings of burger menu -->
+    <string name="img_Desc">Imagen</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_services">Servicios</string>
+    <string name="menu_directory">Directorio</string>
+    <string name="menu_contact">Contacto</string>
+    <string name="menu_location">Ubicación</string>
+    <string name="menu_about">Nosotros</string>
+
+    <!-- Strings of services -->
+    <string name="serv_movilidad">Transporte Terrestre ASA</string>
+    <string name="serv_tarifas">Tarifas</string>
+    <string name="serv_ciiasa">CIIASA</string>
+    <string name="serv_combustible">Combustible</string>
+    <string name="serv_consultoria">Consultoría, asesoría técnica y sustentabilidad ambiental</string>
+    <string name="serv_servAereo">Servicios aeroportuarios</string>
+
+    <!-- Strings of send email -->
+    <string name="contc_title">Envíanos tus comentarios y sugerencias</string>
+    <string name="contc_name">Nombre completo</string>
+    <string name="contc_phone">Teléfono de contacto</string>
+    <string name="contc_email">Correo electrónico</string>
+    <string name="contc_message">Escribe tu mensaje</string>
+    <string name="contc_subject">Contact app</string>
+    <string name="contc_send">ejemplo@organismo.com</string>
+    <string name="contc_btnSend">Enviar</string>
+
+    <!-- Strings of about fragment -->
+    <string name="about_titlePresent">¿Quiénes somos?</string>
+    <string name="about_present">Con más de 50 años de experiencia Aeropuertos y
+        Servicios Auxiliares (ASA) opera, administra, construye y conserva aeropuertos;
+        presta servicios de suministro de combustibles, ofrece asistencia técnica y consultoría,
+        así como instrucción e investigación en materia aeronáutica y aeroportuaria.</string>
+    <string name="about_btnMoreInformation">Saber más</string>
+    <string name="about_customers">Algunos de nuestros clientes</string>
+    <string name="about_alliances">Algunas de nuestras alianzas</string>
+
+    <!-- Strings of social foot -->
+    <string name="about_privacidad">Aviso de Privacidad</string>
+    <string name="about_terminos">Terminos y Condiciones</string>
+
+    <!-- Strings of directory fragment -->
+    <string name="dir_inform">Informes</string>
+    <string name="dir_phone">Télefono de contacto comercial</string>
+    <string name="dir_number">5551331000</string>
+    <string name="dir_ext">Ext: 2401</string>
+    <string name="dir_titleEmail">Correo electrónico</string>
+    <string name="dir_email">asacomercial@asa.gob.mx</string>
+    <string name="dir_email2">asaescuchatuvoz@asa.gob.mx</string>
+    <string name="dir_call">Llamar</string>
+    <string name="dir_sendEmail">Enviar correo</string>
+</resources>

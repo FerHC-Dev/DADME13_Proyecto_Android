@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.asa.gob.mx.asa.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_nav_home_to_nav_services"
+            app:destination="@id/nav_services" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_about"
+            app:destination="@id/nav_about" />
+        <action
+            android:id="@+id/action_nav_home_to_nav_directory"
+            app:destination="@id/nav_directory" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_services"
+        android:name="com.asa.gob.mx.asa.ui.services.ServicesFragment"
+        android:label="@string/menu_services"
+        tools:layout="@layout/fragment_services" />
+
+    <fragment
+        android:id="@+id/nav_directory"
+        android:name="com.asa.gob.mx.asa.ui.directory.DirectoryFragment"
+        android:label="@string/menu_directory"
+        tools:layout="@layout/fragment_directory" >
+        <action
+            android:id="@+id/action_nav_directory_to_nav_contact"
+            app:destination="@id/nav_contact" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_contact"
+        android:name="com.asa.gob.mx.asa.ui.directory.ContactFragment"
+        android:label="@string/menu_contact"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/nav_about"
+        android:name="com.asa.gob.mx.asa.ui.about.AboutFragment"
+        android:label="@string/menu_about"
+        tools:layout="@layout/fragment_about" />
+</navigation>

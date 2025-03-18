@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/home_fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidePercentBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidePercentTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1"
+            />
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_asa_principal"
+            android:contentDescription="@string/img_Desc"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guidePercentTop"
+            />
+
+        <TextView
+            android:id="@+id/tvTitleServices"
+            style="@style/titlePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_contact"
+            app:layout_constraintStart_toEndOf="@id/imgLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guidePercentTop"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/tvTitleTemp"
+            style="@style/titlePage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            app:layout_constraintTop_toBottomOf="@id/guidePercentTop"
+            android:text="@string/menu_home"/>
+
+        <ImageView
+            android:id="@+id/ivTemp"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:src="@android:drawable/ic_dialog_dialer"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleTemp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

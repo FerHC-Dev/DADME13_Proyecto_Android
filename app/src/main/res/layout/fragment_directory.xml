@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:gravity="center">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidePercentBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidePercentTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1"
+            />
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_asa_principal"
+            android:contentDescription="@string/img_Desc"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guidePercentTop"
+            />
+
+        <TextView
+            android:id="@+id/tvTitleServices"
+            style="@style/titlePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_directory"
+            app:layout_constraintStart_toEndOf="@id/imgLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guidePercentTop"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            android:visibility="invisible"
+            />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@id/guidePercentTop"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd">
+
+            <TextView
+                android:id="@+id/txtDInformes"
+                style="@style/titlePage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dir_inform"
+                android:layout_marginBottom="18dp"/>
+
+
+            <TextView
+                android:id="@+id/txtDTTefono"
+                style="@style/subTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dir_phone"
+                android:layout_marginBottom="30dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/txtDNumero"
+                    style="@style/principalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dir_number"
+                    android:layout_marginEnd="20dp"/>
+
+
+                <TextView
+                    android:id="@+id/txtDExtension"
+                    style="@style/principalText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dir_ext" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/txtDTCorreo"
+                style="@style/subTitleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dir_titleEmail"
+                android:layout_marginBottom="18dp"/>
+
+            <TextView
+                android:id="@+id/txtDCorreo"
+                style="@style/principalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dir_email"
+                android:layout_marginBottom="18dp" />
+
+            <TextView
+                android:id="@+id/txtDCorreo2"
+                style="@style/principalText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dir_email2"
+                android:layout_marginBottom="90dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnLlamar"
+                    android:background="@drawable/shape_btn_border"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dir_call"
+                    android:layout_marginEnd="40dp"/>
+
+
+                <Button
+                    android:id="@+id/btnEnviarCorreo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_btn_border"
+                    android:text="@string/dir_sendEmail" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

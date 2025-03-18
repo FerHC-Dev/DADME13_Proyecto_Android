@@ -1,0 +1,59 @@
+<resources>
+    <string name="app_name">ASA</string>
+    <string name="action_settings">Settings</string>
+    <string name="version">® Aeropuertos y Servicios Auxiliares V1.0</string>
+
+
+    <!-- Strings of burger menu -->
+    <string name="img_Desc">Image</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_services">Services</string>
+    <string name="menu_directory">Directory</string>
+    <string name="menu_contact">Contact</string>
+    <string name="menu_location">Location</string>
+    <string name="menu_about">About Us</string>
+
+    <!-- Strings of services -->
+    <string name="serv_movilidad">Transporte Terrestre ASA</string>
+    <string name="serv_tarifas">Tarifas</string>
+    <string name="serv_ciiasa">CIIASA</string>
+    <string name="serv_combustible">Fuel Services</string>
+    <string name="serv_consultoria">Consultoría, asesoría técnica y sustentabilidad ambiental</string>
+    <string name="serv_servAereo">Airport Services</string>
+
+    <!-- Strings of send email -->
+    <string name="contc_title">Send yours comments and suggestions</string>
+    <string name="contc_name">Full name</string>
+    <string name="contc_phone">Phone number</string>
+    <string name="contc_email">E-mail</string>
+    <string name="contc_message">Message</string>
+    <string name="contc_subject">Contact app</string>
+    <string name="contc_send">ejemplo@organismo.com</string>
+    <string name="contc_btnSend">Send</string>
+
+    <!-- Strings of about fragment -->
+    <string name="about_titlePresent">About Us?</string>
+    <string name="about_present">With more than 50 years of experience Airports and
+         Auxiliary Services (ASA) operates, manages, builds and maintains airports;
+         provides fuel supply services, offers technical assistance and consulting,
+         as well as instruction and research in aeronautical and airport matters.</string>
+    <string name="about_btnMoreInformation">More information</string>
+    <string name="about_customers">Some of our customers</string>
+    <string name="about_alliances">Some of our alliances</string>
+
+    <!-- Strings of social foot -->
+    <string name="about_privacidad">Privacy Policy</string>
+    <string name="about_terminos">Terms and Conditions</string>
+
+    <!-- Strings of directory fragment -->
+    <string name="dir_inform">Information</string>
+    <string name="dir_phone">Comercial contact phone</string>
+    <string name="dir_number">5551331000</string>
+    <string name="dir_ext">Ext: 2401</string>
+    <string name="dir_titleEmail">Electronic mail</string>
+    <string name="dir_email">asacomercial@asa.gob.mx</string>
+    <string name="dir_email2">asaescuchatuvoz@asa.gob.mx</string>
+    <string name="dir_call">Call</string>
+    <string name="dir_sendEmail">Send email</string>
+
+</resources>
