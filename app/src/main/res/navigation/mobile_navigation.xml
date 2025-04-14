@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="com.asa.gob.mx.asa.ui.home.HomeFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -23,13 +23,29 @@
 
     <fragment
         android:id="@+id/nav_services"
-        android:name="com.asa.gob.mx.asa.ui.services.ServicesFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.services.ServicesFragment"
         android:label="@string/menu_services"
-        tools:layout="@layout/fragment_services" />
+        tools:layout="@layout/fragment_services" >
+        <action
+            android:id="@+id/action_nav_services_to_tarifasFragment"
+            app:destination="@id/tarifasFragment" />
+        <action
+            android:id="@+id/action_nav_services_to_servAeroportuariosFragment"
+            app:destination="@id/servAeroportuariosFragment" />
+        <action
+            android:id="@+id/action_nav_services_to_consultoriaFragment"
+            app:destination="@id/consultoriaFragment" />
+        <action
+            android:id="@+id/action_nav_services_to_combustiblesFragment"
+            app:destination="@id/combustiblesFragment" />
+        <action
+            android:id="@+id/action_nav_services_to_CIIASAFragment"
+            app:destination="@id/CIIASAFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_directory"
-        android:name="com.asa.gob.mx.asa.ui.directory.DirectoryFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.directory.DirectoryFragment"
         android:label="@string/menu_directory"
         tools:layout="@layout/fragment_directory" >
         <action
@@ -39,13 +55,55 @@
 
     <fragment
         android:id="@+id/nav_contact"
-        android:name="com.asa.gob.mx.asa.ui.directory.ContactFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.directory.ContactFragment"
         android:label="@string/menu_contact"
         tools:layout="@layout/fragment_contact" />
 
     <fragment
         android:id="@+id/nav_about"
-        android:name="com.asa.gob.mx.asa.ui.about.AboutFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.about.AboutFragment"
         android:label="@string/menu_about"
-        tools:layout="@layout/fragment_about" />
+        tools:layout="@layout/fragment_about" >
+        <action
+            android:id="@+id/action_nav_about_to_termsFragment"
+            app:destination="@id/termsFragment" />
+        <action
+            android:id="@+id/action_nav_about_to_privacyFragment"
+            app:destination="@id/privacyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/termsFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.about.TermsFragment"
+        android:label="@string/about_terminos"
+        tools:layout="@layout/fragment_terms" />
+    <fragment
+        android:id="@+id/privacyFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.about.PrivacyFragment"
+        android:label="@string/about_privacidad"
+        tools:layout="@layout/fragment_privacy" />
+    <fragment
+        android:id="@+id/CIIASAFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.services.selection.CIIASAFragment"
+        android:label="@string/serv_ciiasa"
+        tools:layout="@layout/fragment_ciiasa" />
+    <fragment
+        android:id="@+id/combustiblesFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.services.selection.CombustiblesFragment"
+        android:label="@string/serv_combustible"
+        tools:layout="@layout/fragment_combustibles" />
+    <fragment
+        android:id="@+id/consultoriaFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.services.selection.ConsultoriaFragment"
+        android:label="@string/serv_consultoria"
+        tools:layout="@layout/fragment_consultoria" />
+    <fragment
+        android:id="@+id/servAeroportuariosFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.services.selection.ServAeroportuariosFragment"
+        android:label="@string/serv_servAereo"
+        tools:layout="@layout/fragment_serv_aeroportuarios" />
+    <fragment
+        android:id="@+id/tarifasFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.services.selection.TarifasFragment"
+        android:label="@string/serv_tarifas"
+        tools:layout="@layout/fragment_tarifas" />
 </navigation>

@@ -12,7 +12,7 @@
         android:gravity="end">
 
         <Button
-            android:id="@+id/btnPrivacidad"
+            android:id="@+id/btnPrivacy"
             style="@style/simpleTextFooter"
             android:layout_width="match_parent"
             android:layout_height="32dp"
@@ -21,7 +21,7 @@
             app:icon="@android:drawable/ic_menu_info_details" />
 
         <Button
-            android:id="@+id/btnTerminos"
+            android:id="@+id/btnTerms"
             style="@style/simpleTextFooter"
             android:backgroundTint="#000000"
             android:layout_width="match_parent"
@@ -37,6 +37,6 @@
             android:layout_height="wrap_content"
             android:text="@string/version"
             android:textAlignment="center"
-            android:textSize="11sp"            />
+            android:textSize="11sp"/>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context=".ui.about.AboutFragment">
+        tools:context=".ui.service.about.AboutFragment">
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideEnd"
@@ -214,6 +214,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent">
             <include
+                android:id="@+id/footer"
                 layout="@layout/social_foot" />
         </LinearLayout>
 

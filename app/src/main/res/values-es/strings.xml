@@ -29,9 +29,11 @@
     <string name="contc_message">Escribe tu mensaje</string>
     <string name="contc_subject">Contact app</string>
     <string name="contc_send">ejemplo@organismo.com</string>
+    <string name="contc_sendMessage">Elije un servicio</string>
     <string name="contc_btnSend">Enviar</string>
 
     <!-- Strings of about fragment -->
+    <string name="contc_messageSend">Se solicita el apoyo para: %s\\nCorreo de contacto: %s\\nNúmero de contacto: %s\\n\\n%s</string>
     <string name="about_titlePresent">¿Quiénes somos?</string>
     <string name="about_present">Con más de 50 años de experiencia Aeropuertos y
         Servicios Auxiliares (ASA) opera, administra, construye y conserva aeropuertos;
@@ -55,4 +57,12 @@
     <string name="dir_email2">asaescuchatuvoz@asa.gob.mx</string>
     <string name="dir_call">Llamar</string>
     <string name="dir_sendEmail">Enviar correo</string>
+
+    <!-- Strings of errors -->
+    <string name="err_email">Correo electrónico inválido</string>
+    <string name="err_empty">Campo vacío</string>
+    <string name="err_required">Campo necesario</string>
+    <string name="err_title">A ocurrido un error</string>
+    <string name="err_phone">Número invalido</string>
+    <string name="hello_blank_fragment">Proximamente</string>
 </resources>

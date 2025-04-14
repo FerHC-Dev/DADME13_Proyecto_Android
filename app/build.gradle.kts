@@ -39,7 +39,7 @@ android {
 }
 
 dependencies {
-
+    implementation (libs.pdfview.android)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)

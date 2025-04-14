@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.services.ServicesFragment">
+    tools:context=".ui.service.services.ServicesFragment">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideEnd"
@@ -81,30 +81,6 @@
             android:gravity="center"
             android:layout_marginBottom="20dp">
             <FrameLayout
-                android:id="@+id/btnMovilidad"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:background="@drawable/shape_btn_service"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/img_Desc"
-                    android:padding="5dp"
-                    android:scaleType="matrix"
-                    android:src="@drawable/img_movilidad"/>
-                <TextView
-                    android:layout_width="80dp"
-                    style="@style/btnText"
-                    android:layout_height="wrap_content"
-                    android:text="@string/serv_movilidad"
-                    android:layout_gravity="center|start"
-                    android:layout_marginStart="70dp"
-                    />
-            </FrameLayout>
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
-            <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
                 <ImageButton
@@ -115,24 +91,19 @@
                     android:contentDescription="@string/img_Desc"
                     android:padding="5dp"
                     android:scaleType="matrix"
-                    android:src="@drawable/img_movilidad"/>
+                    android:src="@drawable/img_tarifas"/>
                 <TextView
-                    android:layout_width="80dp"
+                    android:layout_width="wrap_content"
                     style="@style/btnText"
                     android:layout_height="wrap_content"
                     android:text="@string/serv_tarifas"
                     android:layout_gravity="center|start"
-                    android:layout_marginStart="70dp"
+                    android:layout_marginStart="100dp"
                     />
             </FrameLayout>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginBottom="20dp">
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
             <FrameLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
@@ -152,6 +123,36 @@
                     android:text="@string/serv_ciiasa"
                     android:layout_gravity="center|start"
                     android:layout_marginStart="70dp"
+                    />
+            </FrameLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="20dp">
+            <FrameLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:id="@+id/btnAeropuertos"
+                    android:background="@drawable/shape_btn_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/img_Desc"
+                    android:padding="5dp"
+                    android:scaleType="matrix"
+                    android:src="@drawable/img_serv_aero"/>
+                <TextView
+                    android:layout_width="80dp"
+                    style="@style/btnText"
+                    android:layout_height="wrap_content"
+                    android:text="@string/serv_servAereo"
+                    android:layout_gravity="center|start"
+                    android:layout_marginStart="70dp"
+                    android:textAlignment="inherit"
                     />
             </FrameLayout>
             <Space
@@ -206,31 +207,7 @@
                     android:layout_marginStart="70dp"
                     />
             </FrameLayout>
-            <Space
-                android:layout_width="20dp"
-                android:layout_height="match_parent"/>
-            <FrameLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <ImageButton
-                    android:id="@+id/btnAeropuertos"
-                    android:background="@drawable/shape_btn_service"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:contentDescription="@string/img_Desc"
-                    android:padding="5dp"
-                    android:scaleType="matrix"
-                    android:src="@drawable/img_serv_aero"/>
-                <TextView
-                    android:layout_width="80dp"
-                    style="@style/btnText"
-                    android:layout_height="wrap_content"
-                    android:text="@string/serv_servAereo"
-                    android:layout_gravity="center|start"
-                    android:layout_marginStart="70dp"
-                    android:textAlignment="inherit"
-                    />
-            </FrameLayout>
+
         </LinearLayout>
     </LinearLayout>
 

@@ -29,7 +29,9 @@
     <string name="contc_message">Message</string>
     <string name="contc_subject">Contact app</string>
     <string name="contc_send">ejemplo@organismo.com</string>
+    <string name="contc_sendMessage">Choose a service</string>
     <string name="contc_btnSend">Send</string>
+    <string name="contc_messageSend">Se solicita el apoyo para: %s\nCorreo de contacto: %s\nNúmero de contacto: %s\n\n%s</string>
 
     <!-- Strings of about fragment -->
     <string name="about_titlePresent">About Us?</string>
@@ -55,5 +57,15 @@
     <string name="dir_email2">asaescuchatuvoz@asa.gob.mx</string>
     <string name="dir_call">Call</string>
     <string name="dir_sendEmail">Send email</string>
+
+    <!-- Strings of errors -->
+    <string name="err_email">Invalid email</string>
+    <string name="err_empty">Empty field</string>
+    <string name="err_required">Required field</string>
+    <string name="err_title">Error has occurred</string>
+    <string name="err_phone">invalid number</string>
+
+    <string name="hello_blank_fragment">next soon</string>
+
 
 </resources>

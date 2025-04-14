@@ -1,4 +1,4 @@
-package com.asa.gob.mx.asa.ui.directory
+package com.asa.gob.mx.asa.ui.service.directory
 
 import android.content.Intent
 import android.net.Uri
@@ -7,9 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.replace
-import androidx.navigation.findNavController
-import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 import androidx.navigation.fragment.findNavController
 import com.asa.gob.mx.asa.R
 import com.asa.gob.mx.asa.databinding.FragmentDirectoryBinding
