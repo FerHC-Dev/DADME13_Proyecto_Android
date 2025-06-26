@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.ASA" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.ASA" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/primario_300</item>
         <item name="colorPrimaryVariant">@color/primario_200</item>
@@ -13,10 +13,12 @@
         <item name="android:statusBarColor">@color/primario_300</item>
         <!-- Customize your theme here. -->
     </style>
+
     <style name="Theme.ASA.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
     <style name="Theme.ASA.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.ASA.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
@@ -81,6 +83,5 @@
         <item name="fontFamily">@font/institucional</item>
         <item name="android:background">@drawable/shape_btn_service</item>
     </style>
-
 
 </resources>

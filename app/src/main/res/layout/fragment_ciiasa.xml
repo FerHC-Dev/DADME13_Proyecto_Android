@@ -1,14 +1,175 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.service.services.selection.CIIASAFragment">
+    tools:context=".ui.service.services.selection.CIIASAFragment"
+    android:id="@+id/ciiasa_fragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:gravity="center">
 
-</FrameLayout>
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidePercentBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidePercentTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1"
+            />
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:src="@drawable/img_asa_ciiasa"
+            android:contentDescription="@string/img_Desc"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guidePercentTop"
+            />
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:indeterminateDrawable="@drawable/loading_anim"
+            android:indeterminateDuration="1500"
+            tools:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/tvCiiasaTitle"
+            style="@style/titlePage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:text="@string/ciiasa_courseTitle"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            app:layout_constraintTop_toBottomOf="@id/imgLogo"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvCiiasaCourse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            app:layout_constraintTop_toBottomOf="@+id/tvCiiasaTitle"
+            app:layout_constraintBottom_toTopOf="@id/tlMoreServices"
+            />
+
+
+        <LinearLayout
+            android:id="@+id/tlMoreServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/black"
+            android:orientation="vertical"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+
+                <Button
+                    android:id="@+id/btnRentRoom"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ciiasa_rentRoom"
+                    android:layout_marginEnd="15dp" />
+
+                <Button
+                    android:id="@+id/btnLocation"
+                    style="?android:attr/buttonBarButtonStyle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ciiasa_location"
+                    />
+
+            </TableRow>
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                >
+
+                <ImageButton
+                    android:id="@+id/btnAboutCIIASA"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_aboutus"
+                    android:scaleType="centerInside"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_Desc"
+                    android:background="@color/black"
+                    app:tint="@color/primario_300"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnWeb"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_web"
+                    android:scaleType="centerInside"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_Desc"
+                    android:background="@color/black"
+                    app:tint="@color/primario_300"
+                    />
+
+                <ImageButton
+                    android:id="@+id/btnPhone"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:src="@drawable/ic_whatsapp"
+                    android:scaleType="centerInside"
+                    android:layout_weight="1"
+                    android:contentDescription="@string/img_Desc"
+                    android:background="@color/black"
+                    app:tint="@color/primario_300"
+                    />
+            </TableRow>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

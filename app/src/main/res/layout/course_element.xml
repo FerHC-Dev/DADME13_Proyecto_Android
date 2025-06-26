@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="15dp"
+        />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guiaEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="15dp"
+        />
+
+    <View
+        android:id="@+id/viewBack"
+        android:layout_width="300dp"
+        android:layout_height="310dp"
+        app:layout_constraintStart_toEndOf="@id/guiaStart"
+        app:layout_constraintEnd_toStartOf="@id/guiaEnd"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+
+    <ImageView
+        android:id="@+id/ivThumbnail"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:src="@drawable/seneam"
+        android:contentDescription="@string/img_Desc"
+        app:layout_constraintStart_toEndOf="@id/guiaStart"
+        app:layout_constraintEnd_toStartOf="@id/guiaEnd"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    
+    <TextView
+        android:id="@+id/tvTitleCourse"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="15dp"
+        android:maxHeight="60dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toEndOf="@id/guiaStart"
+        app:layout_constraintEnd_toStartOf="@id/guiaEnd"
+        app:layout_constraintTop_toBottomOf="@id/ivThumbnail"
+        />
+
+    <Button
+        android:id="@+id/btnCourses"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/ciiasa_courses"
+        app:layout_constraintStart_toEndOf="@id/guiaStart"
+        app:layout_constraintEnd_toStartOf="@id/guiaEnd"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleCourse"
+        />
+
+    <Button
+        android:id="@+id/btnCalendar"
+        style="?android:attr/buttonBarButtonStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="@string/ciiasa_calendar"
+        app:layout_constraintStart_toEndOf="@id/guiaStart"
+        app:layout_constraintEnd_toStartOf="@id/guiaEnd"
+        app:layout_constraintTop_toBottomOf="@id/btnCourses"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

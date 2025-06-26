@@ -2,6 +2,8 @@
     <string name="app_name">ASA</string>
     <string name="action_settings">Settings</string>
     <string name="version">® Aeropuertos y Servicios Auxiliares V1.0</string>
+    <string name="btn_show">Show more</string>
+    <string name="btn_close">Close</string>
 
 
     <!-- Strings of burger menu -->
@@ -12,13 +14,16 @@
     <string name="menu_contact">Contact</string>
     <string name="menu_location">Location</string>
     <string name="menu_about">About Us</string>
+    <string name="menu_notices">Notices</string>
+    <string name="menu_service_pdf">Service</string>
+    <string name="menu_ciiasa_pdf">CIIASA</string>
 
     <!-- Strings of services -->
     <string name="serv_movilidad">Transporte Terrestre ASA</string>
     <string name="serv_tarifas">Tarifas</string>
     <string name="serv_ciiasa">CIIASA</string>
     <string name="serv_combustible">Fuel Services</string>
-    <string name="serv_consultoria">Consultoría, asesoría técnica y sustentabilidad ambiental</string>
+    <string name="serv_consultoria">Consult., asesoría y sust.</string>
     <string name="serv_servAereo">Airport Services</string>
 
     <!-- Strings of send email -->
@@ -62,10 +67,39 @@
     <string name="err_email">Invalid email</string>
     <string name="err_empty">Empty field</string>
     <string name="err_required">Required field</string>
-    <string name="err_title">Error has occurred</string>
+    <string name="err_title">Problem has occurred</string>
     <string name="err_phone">invalid number</string>
+    <string name="err_download">Error trying to download the file</string>
 
     <string name="hello_blank_fragment">next soon</string>
 
+    <!-- Strings of Aeroports services fragment -->
+    <string name="servAero_title">In Aeropuertos y Servicios Auxiliares (ASA)</string>
+    <string name="servAero_operation">Airport Services Operation</string>
+    <string name="servAero_complementary">Complementary Airport Services</string>
+    <string name="servAero_begin">Our airport management and operations service focuses on achieving operational excellence, optimizing every detail to offer an efficient and comfortable experience. We transform your terminal into a benchmark of quality, raising standards and creating memorable moments for passengers and airlines.</string>
+
+    <!-- Strings of Consultory services fragment -->
+    <string name="consult_certificate">Airport Certificate</string>
+    <string name="consult_certificate_body">According to Mandatory Circular CO DA 002/2010 R2, aerodrome certification consists of five phases. Of these, the ASA Verification Unit (UV ASA) participates in three: documentary inspection, on-site inspection, and on-site re-inspection.</string>
+    <string name="consult_verification">Verification Service</string>
+    <string name="consult_verification_body">The ASA Verification Unit (ASA UV) promptly and effectively addresses the inspection requirements established by ICAO and national aviation authorities, with the aim of supporting aerodromes in obtaining their certification.</string>
+    <string name="consult_sustainability">Environmental sustainability</string>
+
+    <!-- Strings of CIIASA services fragment -->
+    <string name="ciiasa_courseTitle">Available courses</string>
+    <string name="ciiasa_courses">Available courses</string>
+    <string name="ciiasa_calendar">Calendar</string>
+    <string name="ciiasa_location">Location</string>
+    <string name="ciiasa_rentRoom">Rent a room</string>
+    <string name="ciiasa_about">About CIIASA</string>
+    <string name="ciiasa_more">Learn more</string>
+    <string name="ciiasa_aboutBody">The International Airport Training and Support Services Center (CIIASA) was inaugurated in June 2010 with the goal of becoming a global benchmark in aeronautical training. Recognized by ICAO as a TRAINAIR PLUS Center of Excellence and in Civil Aviation Security, CIIASA offers specialized and up-to-date training to strengthen airport security in Mexico and Latin America.</string>
+
+    <!-- Strings of Combustibles services fragment -->
+    <string name="comb_storage">Storage</string>
+    <string name="comb_storageBody">With ASA, you have a reliable partner in the aviation fuel industry in Mexico, with a presence in 61 fuel plants and two points of sale throughout the countrys airport network. Its strategic storage infrastructure enables it to offer quality service nationwide.</string>
+    <string name="comb_expended">Expended</string>
+    <string name="comb_expendedBody">We have highly trained personnel who comply with ICAO and international standards. We offer specialized training through courses developed in collaboration with the ASA International Training Center. We have extensive experience in complex operations and utilize modern systems to control our customers supplies.</string>
 
 </resources>

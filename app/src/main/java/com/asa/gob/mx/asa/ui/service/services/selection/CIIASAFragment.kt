@@ -1,60 +1,125 @@
 package com.asa.gob.mx.asa.ui.service.services.selection
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.URLUtil
+import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.GridLayoutManager
 import com.asa.gob.mx.asa.R
+import com.asa.gob.mx.asa.data.remote.model.CoursesDto
+import com.asa.gob.mx.asa.databinding.FragmentCiiasaBinding
+import com.asa.gob.mx.asa.ui.adapters.CoursesAdapter
+import com.asa.gob.mx.asa.utils.Constants
+import com.asa.gob.mx.asa.utils.allowAllSSL
+import com.asa.gob.mx.asa.utils.dialogOK
+import com.asa.gob.mx.asa.utils.downloadFileToCache
+import kotlinx.coroutines.launch
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CIIASAFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CIIASAFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private var _binding: FragmentCiiasaBinding? = null
+    private val binding get() = _binding!!
+
+    private var services: List<CoursesDto> = listOf(
+        CoursesDto("1","","Title1","https://ciiasa.asa.gob.mx/fichas-tecnicas/Factor-y-Desarrollo-Humano/Tecnicas_Didacticas.pdf","https://ciiasa.asa.gob.mx/calendarios/Calendario-SAFETY-2025.pdf"),
+        CoursesDto("2","","Title2","https://ciiasa.asa.gob.mx/fichas-tecnicas/Factor-y-Desarrollo-Humano/Tecnicas_Didacticas.pdf","https://ciiasa.asa.gob.mx/calendarios/Calendario-SAFETY-2025.pdf"),
+        CoursesDto("3","","Title3","https://ciiasa.asa.gob.mx/fichas-tecnicas/Factor-y-Desarrollo-Humano/Tecnicas_Didacticas.pdf","https://ciiasa.asa.gob.mx/calendarios/Calendario-SAFETY-2025.pdf"),
+        CoursesDto("4","","Title4","https://ciiasa.asa.gob.mx/fichas-tecnicas/Factor-y-Desarrollo-Humano/Tecnicas_Didacticas.pdf","https://ciiasa.asa.gob.mx/calendarios/Calendario-SAFETY-2025.pdf"),
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_ciiasa, container, false)
-    }
+        _binding = FragmentCiiasaBinding.inflate(inflater, container, false)
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CIIASAFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CIIASAFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+        lifecycleScope.launch {
+            try {
+                val service = services
+
+                binding.rvCiiasaCourse.apply {
+                    layoutManager = GridLayoutManager(requireContext()
+                        , 2)
+                    adapter = CoursesAdapter(service,{ selectedCalendar ->
+                        val uri = Uri.parse(selectedCalendar.calendar)
+                        lifecycleScope.launch {
+                            allowAllSSL()
+                            val file = downloadFileToCache(requireContext(), uri.toString(), Constants.PDF_TEMP_FILE)
+                            val action = file?.let {
+                                CIIASAFragmentDirections.actionCIIASAFragmentToCiiasaPDFViewerFragment(
+                                    it.absolutePath)
+                            }
+                            if (action != null) {
+                                findNavController().navigate(action)
+                            }else{
+                                dialogOK(requireContext(),getString(R.string.err_title),getString(R.string.err_download))
+                            }
+                        }
+                    }, { selectedCourse ->
+                        val uri = Uri.parse(selectedCourse.course)
+                        lifecycleScope.launch {
+                            allowAllSSL()
+                            val file = downloadFileToCache(requireContext(), uri.toString(), Constants.PDF_TEMP_FILE)
+                            val action = file?.let {
+                                CIIASAFragmentDirections.actionCIIASAFragmentToCiiasaPDFViewerFragment(
+                                    it.absolutePath)
+                            }
+                            if (action != null) {
+                                findNavController().navigate(action)
+                            }else{
+                                dialogOK(requireContext(),getString(R.string.err_title),getString(R.string.err_download))
+                            }
+                        }
+                    })
+                }
+
+            }catch (e: Exception){
+                e.printStackTrace()
+            }finally {
+                binding.pbLoading.visibility = View.GONE
+            }
+        }
+
+        binding.apply {
+            btnRentRoom.setOnClickListener {
+                val action = CIIASAFragmentDirections.actionCIIASAFragmentToServicesPDFViewerFragment(
+                    Constants.SHOWRENTROOMCIIASA)
+                findNavController().navigate(action)
+            }
+            btnLocation.setOnClickListener {
+                val uri = Uri.parse(Constants.URL_MAPCIIASA)
+                if (URLUtil.isValidUrl(uri.toString())) {
+                    startActivity(Intent(Intent.ACTION_VIEW, uri))
                 }
             }
+            btnAboutCIIASA.setOnClickListener {
+                val dialog = CIIASADialog()
+                dialog.show(childFragmentManager,getString(R.string.serv_ciiasa))
+            }
+            btnWeb.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(Constants.URL_CIIASA))
+                startActivity(intent)
+            }
+            btnPhone.setOnClickListener {
+                val intent = Intent(Intent.ACTION_VIEW, Uri.parse(Constants.URL_WHATS))
+                startActivity(intent)
+            }
+        }
+
+
+
+
+        return binding.root
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
     }
 }

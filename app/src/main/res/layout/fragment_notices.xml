@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.service.home.NoticesFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        >
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="20dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidePercentBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.95"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidePercentTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.1"
+            />
+
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="170dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_asa_principal"
+            android:contentDescription="@string/img_Desc"
+            android:layout_margin="10dp"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guidePercentTop"
+            />
+
+        <TextView
+            android:id="@+id/tvTitleServices"
+            style="@style/titlePage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_directory"
+            app:layout_constraintStart_toEndOf="@id/imgLogo"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/guidePercentTop"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            android:visibility="invisible"
+            />
+
+        <TextView
+            android:id="@+id/tvTitleNotice"
+            style="@style/titlePage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            app:layout_constraintTop_toBottomOf="@id/guidePercentTop"/>
+
+        <ImageView
+            android:id="@+id/ivNotice"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:contentDescription="@string/img_Desc"
+            android:src="@drawable/senasa"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            app:layout_constraintTop_toBottomOf="@id/tvTitleNotice"
+            />
+
+        <TextView
+            android:id="@+id/tvNoticeContent"
+            style="@style/simpleText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toEndOf="@id/guideStart"
+            app:layout_constraintEnd_toStartOf="@id/guideEnd"
+            app:layout_constraintTop_toBottomOf="@id/ivNotice"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

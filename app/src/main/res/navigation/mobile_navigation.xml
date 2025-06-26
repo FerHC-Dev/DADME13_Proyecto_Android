@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_nav_home_to_nav_directory"
             app:destination="@id/nav_directory" />
+        <action
+            android:id="@+id/action_nav_home_to_noticesFragment"
+            app:destination="@id/noticesFragment" />
     </fragment>
 
     <fragment
@@ -85,25 +88,71 @@
         android:id="@+id/CIIASAFragment"
         android:name="com.asa.gob.mx.asa.ui.service.services.selection.CIIASAFragment"
         android:label="@string/serv_ciiasa"
-        tools:layout="@layout/fragment_ciiasa" />
+        tools:layout="@layout/fragment_ciiasa" >
+        <action
+            android:id="@+id/action_CIIASAFragment_to_servicesPDFViewerFragment"
+            app:destination="@id/servicesPDFViewerFragment" />
+        <action
+            android:id="@+id/action_CIIASAFragment_to_ciiasaPDFViewerFragment"
+            app:destination="@id/ciiasaPDFViewerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/combustiblesFragment"
         android:name="com.asa.gob.mx.asa.ui.service.services.selection.CombustiblesFragment"
         android:label="@string/serv_combustible"
-        tools:layout="@layout/fragment_combustibles" />
+        tools:layout="@layout/fragment_combustibles" >
+        <action
+            android:id="@+id/action_combustiblesFragment_to_servicesPDFViewerFragment"
+            app:destination="@id/servicesPDFViewerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/consultoriaFragment"
         android:name="com.asa.gob.mx.asa.ui.service.services.selection.ConsultoriaFragment"
         android:label="@string/serv_consultoria"
-        tools:layout="@layout/fragment_consultoria" />
+        tools:layout="@layout/fragment_consultoria" >
+        <action
+            android:id="@+id/action_consultoriaFragment_to_servicesPDFViewerFragment"
+            app:destination="@id/servicesPDFViewerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/servAeroportuariosFragment"
         android:name="com.asa.gob.mx.asa.ui.service.services.selection.ServAeroportuariosFragment"
         android:label="@string/serv_servAereo"
-        tools:layout="@layout/fragment_serv_aeroportuarios" />
+        tools:layout="@layout/fragment_serv_aeroportuarios" >
+        <action
+            android:id="@+id/action_servAeroportuariosFragment_to_servicesPDFViewerFragment"
+            app:destination="@id/servicesPDFViewerFragment" />
+    </fragment>
     <fragment
         android:id="@+id/tarifasFragment"
         android:name="com.asa.gob.mx.asa.ui.service.services.selection.TarifasFragment"
         android:label="@string/serv_tarifas"
         tools:layout="@layout/fragment_tarifas" />
+    <fragment
+        android:id="@+id/noticesFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.home.NoticesFragment"
+        android:label="@string/menu_notices"
+        tools:layout="@layout/fragment_notices" >
+        <argument
+            android:name="notices"
+            app:argType="com.asa.gob.mx.asa.data.remote.model.Notices" />
+    </fragment>
+    <fragment
+        android:id="@+id/servicesPDFViewerFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.services.selection.ServicesPDFViewerFragment"
+        android:label="@string/menu_service_pdf"
+        tools:layout="@layout/fragment_services_pdf_viewer" >
+        <argument
+            android:name="show"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/ciiasaPDFViewerFragment"
+        android:name="com.asa.gob.mx.asa.ui.service.services.selection.CiiasaPDFViewerFragment"
+        android:label="@string/menu_ciiasa_pdf"
+        tools:layout="@layout/fragment_ciiasa_pdf_viewer" >
+        <argument
+            android:name="file"
+            app:argType="string" />
+    </fragment>
 </navigation>

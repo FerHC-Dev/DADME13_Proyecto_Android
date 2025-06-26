@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".ui.service.home.HomeFragment"
     android:id="@+id/home_fragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,6 +45,18 @@
             app:layout_constraintGuide_percent="0.1"
             />
 
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:indeterminateDrawable="@drawable/loading_anim"
+            android:indeterminateDuration="1500"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
         <ImageView
             android:id="@+id/imgLogo"
             android:layout_width="170dp"
@@ -69,25 +82,18 @@
             android:visibility="invisible"
             />
 
-        <TextView
-            android:id="@+id/tvTitleTemp"
-            style="@style/titlePage"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            app:layout_constraintStart_toEndOf="@id/guideStart"
-            app:layout_constraintEnd_toStartOf="@id/guideEnd"
-            app:layout_constraintTop_toBottomOf="@id/guidePercentTop"
-            android:text="@string/menu_home"/>
 
-        <ImageView
-            android:id="@+id/ivTemp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvNotice"
             android:layout_width="0dp"
-            android:layout_height="200dp"
-            android:src="@android:drawable/ic_dialog_dialer"
-            android:layout_marginTop="20dp"
+            android:layout_height="320dp"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal"
+            android:scrollbars="horizontal"
             app:layout_constraintStart_toEndOf="@id/guideStart"
             app:layout_constraintEnd_toStartOf="@id/guideEnd"
-            app:layout_constraintTop_toBottomOf="@id/tvTitleTemp"/>
+            app:layout_constraintTop_toBottomOf="@id/tvTitleServices"/>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

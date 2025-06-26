@@ -3,6 +3,8 @@
     <string name="app_name">ASA</string>
     <string name="action_settings">Configuración</string>
     <string name="version">® Aeropuertos y Servicios Auxiliares V1.0</string>
+    <string name="btn_show">Ver más</string>
+    <string name="btn_close">Cerrar</string>
 
     <!-- Strings of burger menu -->
     <string name="img_Desc">Imagen</string>
@@ -12,13 +14,16 @@
     <string name="menu_contact">Contacto</string>
     <string name="menu_location">Ubicación</string>
     <string name="menu_about">Nosotros</string>
+    <string name="menu_notices">Avisos</string>
+    <string name="menu_service_pdf">Servicio</string>
+    <string name="menu_ciiasa_pdf">CIIASA</string>
 
     <!-- Strings of services -->
     <string name="serv_movilidad">Transporte Terrestre ASA</string>
     <string name="serv_tarifas">Tarifas</string>
     <string name="serv_ciiasa">CIIASA</string>
     <string name="serv_combustible">Combustible</string>
-    <string name="serv_consultoria">Consultoría, asesoría técnica y sustentabilidad ambiental</string>
+    <string name="serv_consultoria">Consult., asesoría y sust.</string>
     <string name="serv_servAereo">Servicios aeroportuarios</string>
 
     <!-- Strings of send email -->
@@ -62,7 +67,40 @@
     <string name="err_email">Correo electrónico inválido</string>
     <string name="err_empty">Campo vacío</string>
     <string name="err_required">Campo necesario</string>
-    <string name="err_title">A ocurrido un error</string>
+    <string name="err_title">A ocurrido algo inesperado</string>
     <string name="err_phone">Número invalido</string>
+    <string name="err_download">Error al intentar descargar el archivo</string>
+
     <string name="hello_blank_fragment">Proximamente</string>
+
+    <!-- Strings of Aeroports services fragment -->
+    <string name="servAero_title">En Aeropuertos y Servicios Auxiliares (ASA)</string>
+    <string name="servAero_operation">Servicios Aeroportuarios de operación</string>
+    <string name="servAero_complementary">Servicios aeroportuarios complementarios</string>
+    <string name="servAero_begin">Nuestro servicio de administración y operación aeroportuaria se enfoca en alcanzar la excelencia operativa, optimizando cada detalle para ofrecer una experiencia eficiente y cómoda. Convertimos tu terminal en un referente de calidad, elevando los estándares y generando momentos memorables para pasajeros y aerolíneas.</string>
+
+    <!-- Strings of Consultory services fragment -->
+    <string name="consult_certificate">Certificación de aeropuertos</string>
+    <string name="consult_certificate_body">La certificación de aeródromos, según la Circular Obligatoria CO DA 002/2010 R2, consta de cinco fases. De estas, la Unidad Verificadora de ASA (UV ASA) participa en tres: la inspección documental, la inspección en sitio y la re-inspección en sitio.</string>
+    <string name="consult_verification">Servicios de la unidad de verificación</string>
+    <string name="consult_verification_body">La Unidad de Verificación de ASA (UV ASA) atiende de forma oportuna y efectiva los requerimientos de inspección establecidos por la OACI y las autoridades aeronáuticas nacionales, con el objetivo de apoyar a los aeródromos en la obtención de su certificado.</string>
+    <string name="consult_sustainability">Sustentabilidad ambiental</string>
+
+    <!-- Strings of CIIASA services fragment -->
+    <string name="ciiasa_courseTitle">Cursos disponibles</string>
+    <string name="ciiasa_courses">Cursos disponibles</string>
+    <string name="ciiasa_calendar">Calendario</string>
+    <string name="ciiasa_location">Ubicación</string>
+    <string name="ciiasa_rentRoom">Renta de espacios</string>
+    <string name="ciiasa_about">Acerca de CIIASA</string>
+    <string name="ciiasa_more">Conoce más</string>
+    <string name="ciiasa_aboutBody">El Centro Internacional de Instrucción de Aeropuertos y Servicios Auxiliares (CIIASA) fue inaugurado en junio de 2010 con el objetivo de convertirse en un referente global en formación aeronáutica. Reconocido por la OACI como Centro de Excelencia TRAINAIR PLUS y en Seguridad de la Aviación Civil, el CIIASA ofrece instrucción especializada y actualizada para fortalecer la seguridad aeroportuaria en México y América Latina.</string>
+
+    <!-- Strings of Combustibles services fragment -->
+    <string name="comb_storage">Almacenamiento</string>
+    <string name="comb_storageBody">Con ASA, cuenta con un socio confiable en la industria de combustibles de aviación en México, con presencia en 61 plantas de combustible y 2 puntos de venta en la red aeroportuaria del país. Su infraestructura de almacenamiento estratégica permite ofrecer un servicio de calidad a nivel nacional.</string>
+    <string name="comb_expended">Expendio</string>
+    <string name="comb_expendedBody">Contamos con personal altamente capacitado bajo estándares de la OACI y normas internacionales. Ofrecemos capacitación especializada mediante cursos desarrollados con el Centro Internacional de Instrucción de ASA. Tenemos amplia experiencia en operaciones complejas y utilizamos sistemas modernos para el control del suministro a nuestros clientes.</string>
+
+
 </resources>
