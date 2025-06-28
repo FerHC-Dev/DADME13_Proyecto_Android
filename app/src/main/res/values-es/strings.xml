@@ -55,11 +55,11 @@
     <!-- Strings of directory fragment -->
     <string name="dir_inform">Informes</string>
     <string name="dir_phone">Télefono de contacto comercial</string>
-    <string name="dir_number">5551331000</string>
-    <string name="dir_ext">Ext: 2401</string>
+    <string name="dir_number">1234567890</string>
+    <string name="dir_ext">Ext: 0000</string>
     <string name="dir_titleEmail">Correo electrónico</string>
-    <string name="dir_email">asacomercial@asa.gob.mx</string>
-    <string name="dir_email2">asaescuchatuvoz@asa.gob.mx</string>
+    <string name="dir_email">ejemplo1@ejemplo.com</string>
+    <string name="dir_email2">ejemplo2@ejemplo.com</string>
     <string name="dir_call">Llamar</string>
     <string name="dir_sendEmail">Enviar correo</string>
 
